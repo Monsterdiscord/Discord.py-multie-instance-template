@@ -16,10 +16,35 @@ bot5= commands.Bot(command_prefix='!')
 
 bot.author_id = enter id here  # Change to your discord id!!!
 
-@bot.event 
-async def on_ready():  # When the bot is ready
-    print("I'm in")
-    print(bot.user)  # Prints the bot's username and identifier
+@bot.event
+async def on_ready():
+  game = discord.Game(f"made by monster")
+  await bot.change_presence(status=discord.Status, activity=game)
+  print(f'logged in as {bot.user}')
+
+@bot2.event
+async def on_ready():
+  game = discord.Game(f"made by monster")
+  await bot2.change_presence(status=discord.Status, activity=game)
+  print(f'logged in as {bot2.user}')
+
+@bot3.event
+async def on_ready():
+  game = discord.Game(f"made by monster")
+  await bot3.change_presence(status=discord.Status, activity=game)
+  print(f'logged in as {bot3.user}')
+
+@bot4.event
+async def on_ready():
+  game = discord.Game(f"made by monster")
+  await bot4.change_presence(status=discord.Status, activity=game)
+  print(f'logged in as {bot4.user}')
+
+@bot5.event
+async def on_ready():
+  game = discord.Game(f"made by monster")
+  await bot4.change_presence(status=discord.Status, activity=game)
+  print(f'logged in as {bot5.user}')
 
 
 extensions = [
